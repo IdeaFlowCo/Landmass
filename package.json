@@ -1,0 +1,19 @@
+{
+  "name": "composer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "startReverseProxy.js",
+  "scripts": {
+    "start": "node --harmony startReverseProxy.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-http-proxy": "^0.6.0",
+    "morgan": "^1.6.1"
+  }
+}
