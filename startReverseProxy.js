@@ -1,11 +1,14 @@
 const express = require('express');
 const proxy = require('express-http-proxy');
 const url = require('url');
-var morgan = require('morgan')
+
+const morgan = require('morgan');
+const compression = require('compression')
 
 const app = express();
 
 app
+  .use(compression())
   .use(morgan('combined'))
   .use('/static/', proxy('127.0.0.1:8080', {
     forwardPath: function(req, res) {

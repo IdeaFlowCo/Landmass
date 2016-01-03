@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
+    "compression": "^1.6.0",
     "express": "^4.13.3",
     "express-http-proxy": "^0.6.0",
     "morgan": "^1.6.1"
