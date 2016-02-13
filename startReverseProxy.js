@@ -14,12 +14,14 @@ app
     forwardPath: function(req, res) {
       var path = url.parse(req.url).path;
       return '/static' + path;
-    }
+    },
+    limit: '10mb'
   }))
   .use('/api/v1/', proxy('127.0.0.1:9090', {
     forwardPath: function(req, res) {
       var path = url.parse(req.url).path;
       return path;
-    }
+    },
+    limit: '10mb'
   }))
   .listen(3003);
