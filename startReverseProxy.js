@@ -10,7 +10,7 @@ const app = express();
 app
   .use(compression())
   .use(morgan('combined'))
-  .use('/api/v1/', proxy('127.0.0.1:9090', {
+  .use('/api/v1/', proxy('127.0.0.1:3000', {
     forwardPath: function(req, res) {
       var path = url.parse(req.url).path;
       return path;
