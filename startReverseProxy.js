@@ -6,7 +6,7 @@ const morgan = require('morgan');
 const compression = require('compression')
 
 const app = express();
-const hostname = process.env.HOST_IP || 127.0.0.1
+const hostname = process.env.HOST_IP || '127.0.0.1'
 
 app
   .use(compression())
