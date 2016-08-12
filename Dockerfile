@@ -1,5 +1,6 @@
 FROM node:6.3.1
 
+ADD wait-for-it.sh wait-for-it.sh
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
