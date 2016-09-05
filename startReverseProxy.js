@@ -15,13 +15,13 @@ app
       var path = url.parse(req.url).path;
       return path;
     },
-    limit: '10mb'
+    limit: '100mb'
   }))
   .use('/', proxy('127.0.0.1:8080', {
     forwardPath: function(req, res) {
       var path = url.parse(req.url).path;
       return /^\/src|jspm_packages|node_modules|build/.test(path) ? path : '/'
     },
-    limit: '10mb'
+    limit: '100mb'
   }))
   .listen(3003,'0.0.0.0');
